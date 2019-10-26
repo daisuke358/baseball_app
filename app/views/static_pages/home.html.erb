@@ -1,2 +1,165 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>個人成績</title>
+</head>
+<body>
+　
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table class= "table table-striped ">
+         <thead>
+            <tr>
+              <th></th>
+              <th><%= link_to "セ・リーグ投手成績",   'c_pitcher' %></th>
+              <th>防御率</th>
+              <th>WHIP</th>
+              <th>FIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><%= link_to "大野 雄大 （中）", '/personal_stats'%></td>
+              <td>2.58</td>
+              <td>0.98</td>
+              <td>#</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><%= link_to "ジョンソン（広）", '/personal_stats'%></td>
+              <td>2.59</td>
+              <td>1.21</td>
+              <td>#</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><%= link_to "山口 俊（巨）", '/personal_stats'%></td>
+              <td>2.91</td>
+              <td>1.16</td>
+              <td>#</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class= "table table-striped ">
+        <thead>
+            <tr>
+              <th></th>
+              <th><%= link_to "パ・リーグ投手成績",   'p_pitcher' %></th>
+              <th>防御率</th>
+              <th>WHIP</th>
+              <th>FIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><%= link_to "山本 由伸(オ)", '/personal_stats'%></td>
+              <td>1.95</td>
+              <td>0.96</td>
+              <td>#</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><%= link_to "有原 航平（日）", '/personal_stats'%></td>
+              <td>2.46</td>
+              <td>0.92</td>
+              <td>#</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><%= link_to "千賀 滉大（ソ）", '/personal_stats'%></td>
+              <td>2.79</td>
+              <td>1.16</td>
+              <td>#</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>              
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table class= "table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th><%= link_to "セ・リーグ打撃成績",   'c_batter' %></th>
+            <th>打率</th>
+            <th>ｗＯＢＡ</th>
+            <th>ＲＣ２７</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><%= link_to "鈴木 誠也（広）", '/personal_stats'%></td>
+            <td>.335</td>
+            <td>#</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><%= link_to "ビシエド（中）", '/personal_stats'%></td>
+            <td>.315</td>
+            <td>#</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><%= link_to "糸井 嘉男（神）", '/personal_stats'%></td>
+            <td>.314</td>
+            <td>#</td>
+            <td>#</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+        <div class="col-md-6">
+          <table class= "table table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><%= link_to "パ・リーグ打撃成績",   'p_batter' %></th>
+                  <th>打率</th>
+                  <th>ｗＯＢＡ</th>
+                  <th>ＲＣ２７</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><%= link_to "森 友哉（西）", '/personal_stats'%></td>
+                  <td>.329</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><%= link_to "吉田 正尚（オ）", '/personal_stats'%></td>
+                  <td>.322</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><%= link_to "荻野 貴司（ロ）", '/personal_stats'%></td>
+                  <td>.315</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+  </div>
+</div>
+
+
+</body>
+</html> 

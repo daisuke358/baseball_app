@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>個人成績</title>
+</head>
+<body>
+　　
+  <h1>山本 由伸（オ）</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"><%= image_tag '1600153_s.jpg', :size =>'180x240'%></div>
+      <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
+    </div>
+  </div>
+
+  <table class= "table table-striped">
+    <thead>
+      <tr>
+        <th>防御率</th>
+        <th>登板</th>
+        <th>先発</th>
+        <th>完投</th>
+        <th>完封</th>
+        <th>QS</th>
+        <th>勝利</th>
+        <th>敗戦</th>
+        <th>ホールド</th>
+        <th>ホールドポイント</th>
+        <th>セーブ</th>
+        <th>勝率</th>
+        <th>投球回</th>
+        <th>被安打</th>   
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1.95</td>
+        <td>20</td>
+        <td>20</td>
+        <td>1</td>
+        <td>1</td>
+        <td>16</td>
+        <td>8</td>
+        <td>6</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>.571</td>
+        <td>143</td>
+        <td>101</td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th>被本塁打</th>
+        <th>雑三振</th>
+        <th>奪三振率</th>
+        <th>与四球</th>
+        <th>与死球</th>
+        <th>暴投</th>
+        <th>ボーク</th>
+        <th>失点</th>
+        <th>自責点</th>
+        <th>被打率</th>
+        <th>K/BB</th>
+        <th>WHIP</th>
+        <th>RSAA</th>
+        <th>FIP</th>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>127</td>
+        <td>7.99</td>
+        <td>36</td>
+        <td>3</td>
+        <td>3</td>
+        <td>1</td>
+        <td>37</td>
+        <td>31</td>
+        <td>.200</td>
+        <td>3.53</td>
+        <td>0.96</td>
+        <td>#</td>
+        <td>#</td>
+      </tr>
+</table>
+</body>
+</html> 
