@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'glossary', to: 'static_pages#glossary'
+  get 'new', to: 'setting#new'
+  post '/new', to: 'setting#create'
 
   get '/c_pitcher', to: 'stats#central_pitcher'
   get '/c_batter', to:'stats#central_batter'

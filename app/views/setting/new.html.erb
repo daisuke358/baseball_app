@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>編集</title>
+</head>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      
+
+      <%= form_for(@batter, url: new_path) do |f| %>
+ 
+
+      <%= f.label :選手名 %>
+      <%= f.text_field :name %>
+
+      <%= f.label :所属リーグ %>
+      <%= f.text_field :league %>
+
+      <%= f.label :試合 %>
+      <%= f.text_field :game %>
+
+      <%= f.label :打席数 %>
+      <%= f.text_field :pa %>
+
+      <%= f.label :打数 %>
+      <%= f.text_field :ab %>
+
+      <%= f.label :安打 %>
+      <%= f.text_field :hit %>
+
+      <%= f.label :二塁打 %>
+      <%= f.text_field :hit_2b %>
+
+      <%= f.label :三塁打 %>
+      <%= f.text_field :hit_3b %>
+
+      <%= f.label :本塁打 %>
+      <%= f.text_field :hr %>
+
+      <%= f.label :塁打 %>
+      <%= f.text_field :tb %>
+
+      <%= f.label :打点 %>
+      <%= f.text_field :rbi %>
+
+      <%= f.label :得点 %>
+      <%= f.text_field :run %>
+
+      <%= f.label :三振 %>
+      <%= f.text_field :so %>
+
+      <%= f.label :四球 %>
+      <%= f.text_field :bb %>
+
+      <%= f.label :敬遠 %>
+      <%= f.text_field :ibb %>
+
+      <%= f.label :死球 %>
+      <%= f.text_field :hbp %>
+
+      <%= f.label :犠打 %>
+      <%= f.text_field :sh %>
+
+      <%= f.label :犠飛 %>
+      <%= f.text_field :sf %>
+
+      <%= f.label :盗塁 %>
+      <%= f.text_field :sb %>
+
+      <%= f.label :盗塁死 %>
+      <%= f.text_field :cs %>
+
+      <%= f.label :併殺打  %>
+      <%= f.text_field :gdp %>
+
+
+
+
+
+      <%= f.submit "決定", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
