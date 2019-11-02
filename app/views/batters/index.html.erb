@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>パ・リーグ打者成績</title>
+</head>
+
+
+<body>
+  <table class= "table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>規定打席以上</th>
+      <th>打率</th>
+      <th>試合</th>
+      <th>打席</th>
+      <th>打数</th>
+      <th>安打</th>
+      <th>二塁打</th>
+      <th>三塁打</th>
+      <th>本塁打</th>
+      <th>塁打</th>
+      <th>打点</th>
+      <th>得点</th>
+      <th>三振</th>
+      <th>四球</th>
+      <th>死球</th>
+      <th>犠打</th>
+      <th>犠飛</th>
+      <th>盗塁</th>
+      <th>盗塁死</th>
+      <th>併殺打</th>
+      <th>出塁率</th>
+      <th>長打率</th>
+      <th>ＯＰＳ</th>
+      <th>ｗＯＢＡ</th>
+      <th>ｗＲＡＡ</th>
+      <th>ｗＲＣ</th>
+      <th>ＩｓｏＤ</th>   
+      <th>ＩｓｏＰ</th>
+      <th>ＲＣ２７</th>
+    </tr>
+</thead>
+
+<% @batters.each do |batter| %>
+
+<tbody>
+  <tr>
+      <td><%= @rank %></td>
+      <td><%= link_to batter.name, batter%></td>
+      <td><%= batter.avg %></td>
+      <td><%= batter.game %></td>
+      <td><%= batter.pa %></td>
+      <td><%= batter.ab %></td>
+      <td><%= batter.hit %></td>
+      <td><%= batter.hit_2b %></td>
+      <td><%= batter.hit_3b %></td>
+      <td><%= batter.hr %></td>
+      <td><%= batter.tb %></td>
+      <td><%= batter.rbi %></td>
+      <td><%= batter.run %></td>
+      <td><%= batter.so %></td>
+      <td><%= batter.bb %></td>
+      <td><%= batter.hbp %></td>
+      <td><%= batter.sh %></td>
+      <td><%= batter.sf %></td>
+      <td><%= batter.sb %></td>
+      <td><%= batter.cs %></td>
+      <td><%= batter.gdp %></td>
+      <td><%= batter.obp %></td>
+      <td><%= batter.slg %></td>
+      <td><%= batter.ops %></td>
+      <td><%= batter.w_oba %></td>
+      <td><%= batter.w_raa_p %></td>
+      <td><%= batter.w_rc_p %></td>
+      <td><%= batter.iso_d %></td>
+      <td><%= batter.iso_p %></td>
+      <td><%= batter.rc27 %></td>
+    </tr>
+  </tbody>
+<% @rank = @rank + 1 %>
+<% end %>
+
+</table>
+</body>
+</html> 

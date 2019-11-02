@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/p_batter', to: 'stats#pacific_batter'
   get '/personal_pitcher_stats', to: 'stats#personal_pitcher_stats'
   get '/personal_batter_stats', to: 'stats#personal_batter_stats'
+  resources :batters
+  resources :pitchers
 
 
 end
