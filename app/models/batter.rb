@@ -1,6 +1,7 @@
 class Batter < ApplicationRecord
   before_save do  
     self.avg = hit / ab.to_f
+    self.avg_view = self.avg * 1000
     self.obp = (hit + bb + hbp) / (ab + bb + hbp + sf).to_f
     self.slg = tb / ab.to_f
     self.ops = self.obp + self.slg

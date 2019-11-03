@@ -19,8 +19,5 @@ class PitchersController < ApplicationController
     end
   end
 
-  def index
-    @pitchers = Pitcher.all
-    @rank = 1
-  end
+
 end

@@ -20,27 +20,17 @@
             </tr>
           </thead>
           <tbody>
+          <% @pitchers_c.first(3).each do |pitcher| %>          
             <tr>
-              <td>1</td>
-              <td><%= link_to "大野 雄大 （中）", '/personal_pitcher_stats'%></td>
-              <td>2.58</td>
-              <td>0.98</td>
-              <td>#</td>
+              <td><%= @rank1 %></td>
+              <td><%= link_to pitcher.name, pitcher%></td>
+              <td><%= pitcher.era %></td>
+              <td><%= pitcher.whip %></td>
+              <td><%= pitcher.fip %></td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td><%= link_to "ジョンソン（広）", '/personal_pitcher_stats'%></td>
-              <td>2.59</td>
-              <td>1.21</td>
-              <td>#</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><%= link_to "山口 俊（巨）", '/personal_pitcher_stats'%></td>
-              <td>2.91</td>
-              <td>1.16</td>
-              <td>#</td>
-            </tr>
+        
+          <% @rank1 = @rank1 + 1 %>
+          <% end %>
           </tbody>
       </table>
     </div>
@@ -54,29 +44,18 @@
               <th>WHIP</th>
               <th>FIP</th>
             </tr>
-          </thead>
+          </thead>          
           <tbody>
+            <% @pitchers_p.first(3).each do |pitcher| %>
             <tr>
-              <td>1</td>
-              <td><%= link_to "山本 由伸(オ)", '/personal_pitcher_stats'%></td>
-              <td>1.95</td>
-              <td>0.96</td>
-              <td>#</td>
+              <td><%= @rank2 %></td>
+              <td><%= link_to pitcher.name, pitcher%></td>
+              <td><%= pitcher.era %></td>
+              <td><%= pitcher.whip %></td>
+              <td><%= pitcher.fip %></td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td><%= link_to "有原 航平（日）", '/personal_pitcher_stats'%></td>
-              <td>2.46</td>
-              <td>0.92</td>
-              <td>#</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><%= link_to "千賀 滉大（ソ）", '/personal_pitcher_stats'%></td>
-              <td>2.79</td>
-              <td>1.16</td>
-              <td>#</td>
-            </tr>
+          <% @rank2 = @rank2 + 1 %>
+          <% end %>
           </tbody>
       </table>
     </div>
@@ -97,30 +76,20 @@
           </tr>
         </thead>
         <tbody>
+          <% @batters_c.first(3).each do |batter| %>
           <tr>
-            <td>1</td>
-            <td><%= link_to "鈴木 誠也（広）", '/personal_batter_stats'%></td>
-            <td>.335</td>
-            <td>#</td>
-            <td>#</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><%= link_to "ビシエド（中）", '/personal_batter_stats'%></td>
-            <td>.315</td>
-            <td>#</td>
-            <td>#</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><%= link_to "糸井 嘉男（神）", '/personal_batter_stats'%></td>
-            <td>.314</td>
-            <td>#</td>
-            <td>#</td>
-          </tr>
+            <td><%= @rank3 %></td>
+            <td><%= link_to batter.name, batter%></td>
+            <td>.<%= batter.avg_view %></td>
+            <td><%= batter.w_oba %></td>
+            <td><%= batter.rc27 %></td>
+          </tr>  
+        <% @rank3 = @rank3 + 1 %>
+        <% end %>
         </tbody>
       </table>
     </div>
+        
         <div class="col-md-6">
           <table class= "table table-striped">
               <thead>
@@ -131,35 +100,23 @@
                   <th>ｗＯＢＡ</th>
                   <th>ＲＣ２７</th>
                 </tr>
-              </thead>
+              </thead>              
               <tbody>
+                <% @batters_p.first(3).each do |batter| %>
                 <tr>
-                  <td>1</td>
-                  <td><%= link_to "森 友哉（西）", '/personal_batter_stats'%></td>
-                  <td>.329</td>
-                  <td>#</td>
-                  <td>#</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><%= link_to "吉田 正尚（オ）", '/personal_batter_stats'%></td>
-                  <td>.322</td>
-                  <td>#</td>
-                  <td>#</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><%= link_to "荻野 貴司（ロ）", '/personal_batter_stats'%></td>
-                  <td>.315</td>
-                  <td>#</td>
-                  <td>#</td>
-                </tr>
+                  <td><%= @rank4 %></td>
+                  <td><%= link_to batter.name, batter%></td>
+                  <td>.<%= batter.avg_view %></td>
+                  <td><%= batter.w_oba %></td>
+                  <td><%= batter.rc27 %></td>
+                </tr>                             
+              <% @rank4 = @rank4 + 1 %>
+              <% end %>
               </tbody>
           </table>
         </div>
   </div>
 </div>
-
 
 </body>
 </html> 
