@@ -12,19 +12,12 @@ class BattersController < ApplicationController
       f.pane(size:'90%')                  #グラフサイズの比
       f.xAxis(categories: genre,tickmarkPlacement:'on')    
       f.yAxis(gridLineInterpolation: 'polygon',lineWidth:0,min:0,max:10) #各項目の最大値やら
-      f.series(name:'<%= @batter.name %>',data: aData,pointPlacement:'on')
+      f.series(name:'<%= @batter.name %>',data: aData,pointPlacement:'off')
       f.legend(align: 'right',
           verticalAlign: 'top',
           y: 70,
           layout: 'vertical')
     end
   end
-
-
-  def index
-    @batters = Batter.all
-    @rank = 1
-  end
-
 
 end

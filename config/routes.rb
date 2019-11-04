@@ -18,5 +18,4 @@ Rails.application.routes.draw do
   resources :batters
   resources :pitchers
 
-
 end

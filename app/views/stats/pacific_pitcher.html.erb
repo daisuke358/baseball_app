@@ -6,13 +6,11 @@
 <body>
   <table class= "table table-striped">
   <thead>
-
     <tr>
       <th></th>
       <th>規定投球回以上</th>
       <th>防御率</th>
       <th>登板</th>
-      <th>先発</th>
       <th>完投</th>
       <th>完封</th>
       <th>QS</th>
@@ -33,7 +31,6 @@
       <th>ボーク</th>
       <th>失点</th>
       <th>自責点</th>
-      <th>被打率</th>
       <th>K/BB</th>
       <th>WHIP</th>
       <th>RSAA</th>
@@ -41,200 +38,43 @@
     </tr>
 </thead>
 <tbody>
+    <% @pitchers.each do |pitcher| %>
     <tr>
-      <td>1</td>
-      <td><%= link_to "山本由伸(オ)", '/personal_pitcher_stats'%></td>
-      <td>1.95</td>
-      <td>20</td>
-      <td>20</td>
-      <td>1</td>
-      <td>1</td>
-      <td>16</td>
-      <td>8</td>
-      <td>6</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.571</td>
-      <td>143</td>
-      <td>101</td>
-      <td>8</td>
-      <td>127</td>
-      <td>7.99</td>
-      <td>36</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>37</td>
-      <td>31</td>
-      <td>.200</td>
-      <td>3.53</td>
-      <td>0.96</td>
-      <td>#</td>
-      <td>#</td>
+
+      <td><%= @rank %></td>
+      <td><%= link_to pitcher.name, pitcher %></td>
+      <td><%= pitcher.era %></td>
+      <td><%= pitcher.game %></td>
+      <td><%= pitcher.cg %></td>
+      <td><%= pitcher.sho %></td>
+      <td><%= pitcher.qs %></td>
+      <td><%= pitcher.win %></td>
+      <td><%= pitcher.lose %></td>
+      <td><%= pitcher.hld %></td>
+      <td><%= pitcher.hp %></td>
+      <td><%= pitcher.sv %></td>
+      <td><%= pitcher.wpct %></td>
+      <td><%= pitcher.ip %></td>
+      <td><%= pitcher.hit %></td>
+      <td><%= pitcher.hr %></td>
+      <td><%= pitcher.so %></td>
+      <td><%= pitcher.k_9 %></td>
+      <td><%= pitcher.bb %></td>
+      <td><%= pitcher.hbp %></td>
+      <td><%= pitcher.wp %></td>
+      <td><%= pitcher.bk %></td>
+      <td><%= pitcher.r %></td>
+      <td><%= pitcher.er %></td>
+      <td><%= pitcher.k_bb %></td>
+      <td><%= pitcher.whip %></td>
+      <td><%= pitcher.rsaa_c %></td>
+      <td><%= pitcher.fip %></td>
+
     </tr>
-    <tr>
-      <td>2</td>
-      <td><%= link_to "有原 航平（日）", '/personal_pitcher_stats'%></td>
-      <td>2.46</td>
-      <td>24</td>
-      <td>24</td>
-      <td>1</td>
-      <td>1</td>
-      <td>18</td>
-      <td>15</td>
-      <td>8</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.652</td>
-      <td>164.1</td>
-      <td>111</td>
-      <td>14</td>
-      <td>161</td>
-      <td>8.82</td>
-      <td>40</td>
-      <td>9</td>
-      <td>9</td>
-      <td>0</td>
-      <td>49</td>
-      <td>45</td>
-      <td>.191</td>
-      <td>4.03</td>
-      <td>0.92</td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td><%= link_to "千賀 滉大（ソ）", '/personal_pitcher_stats'%></td>
-      <td>2.79</td>
-      <td>26</td>
-      <td>26</td>
-      <td>2</td>
-      <td>2</td>
-      <td>20</td>
-      <td>13</td>
-      <td>8</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.619</td>
-      <td>180.1</td>
-      <td>134</td>
-      <td>19</td>
-      <td>227</td>
-      <td>11.3</td>
-      <td>75</td>
-      <td>8</td>
-      <td>4</td>
-      <td>1</td>
-      <td>60</td>
-      <td>56</td>
-      <td>.205</td>
-      <td>3.03</td>
-      <td>1.16</td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td><%= link_to "高橋 礼（ソ）", '/personal_pitcher_stats'%></td>
-      <td>3.34</td>
-      <td>23</td>
-      <td>23</td>
-      <td>0</td>
-      <td>0</td>
-      <td>13</td>
-      <td>12</td>
-      <td>6</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.667</td>
-      <td>143</td>
-      <td>114</td>
-      <td>10</td>
-      <td>73</td>
-      <td>4.59</td>
-      <td>49</td>
-      <td>11</td>
-      <td>3</td>
-      <td>1</td>
-      <td>56</td>
-      <td>53</td>
-      <td>.222</td>
-      <td>1.49</td>
-      <td>1.14</td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td><%= link_to "山岡 泰輔（オ）", '/personal_pitcher_stats'%></td>
-      <td>3.71</td>
-      <td>26</td>
-      <td>26</td>
-      <td>2</td>
-      <td>0</td>
-      <td>15</td>
-      <td>13</td>
-      <td>4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.765</td>
-      <td>170</td>
-      <td>154</td>
-      <td>16</td>
-      <td>154</td>
-      <td>8.15</td>
-      <td>45</td>
-      <td>4</td>
-      <td>2</td>
-      <td>0</td>
-      <td>77</td>
-      <td>70</td>
-      <td>.240</td>
-      <td>3.42</td>
-      <td>1.17</td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td><%= link_to "美馬 学（楽）", '/personal_pitcher_stats'%></td>
-      <td>4.01</td>
-      <td>25</td>
-      <td>25</td>
-      <td>2</td>
-      <td>13</td>
-      <td>8</td>
-      <td>5</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>.615</td>
-      <td>143.2</td>
-      <td>146</td>
-      <td>19</td>
-      <td>112</td>
-      <td>7.02</td>
-      <td>24</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>69</td>
-      <td>64</td>
-      <td>.262</td>
-      <td>4.67</td>
-      <td>1.18</td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
+    <% @rank = @rank + 1 %>
+    <% end %>
 
   </tbody>
 </table>
 </body>
-</html> 
+</html>

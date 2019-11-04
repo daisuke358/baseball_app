@@ -5,6 +5,7 @@ class CreateBatters < ActiveRecord::Migration[5.1]
       t.string :picture_id
       t.boolean :league, default: false
       t.decimal :avg, precision: 6, scale: 3
+      t.decimal :avg_view, precision: 0, scale: 0
       t.integer :game
       t.integer :pa
       t.integer :ab
