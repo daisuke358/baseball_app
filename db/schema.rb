@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191031110534) do
+ActiveRecord::Schema.define(version: 20191103133515) do
 
   create_table "batters", force: :cascade do |t|
     t.string "name"
-    t.string "picture_id"
+    t.string "picture"
     t.boolean "league", default: false
     t.decimal "avg", precision: 6, scale: 3
     t.decimal "avg_view", precision: 0
@@ -48,13 +48,16 @@ ActiveRecord::Schema.define(version: 20191031110534) do
     t.decimal "iso_d", precision: 6, scale: 3
     t.decimal "iso_p", precision: 6, scale: 3
     t.decimal "rc27", precision: 6, scale: 3
+    t.integer "avg_g"
+    t.integer "w_oba_g"
+    t.integer "rc27_g"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "pitchers", force: :cascade do |t|
     t.string "name"
-    t.string "picture_id"
+    t.string "picture"
     t.boolean "league", default: false
     t.integer "win"
     t.integer "lose"
@@ -85,8 +88,24 @@ ActiveRecord::Schema.define(version: 20191031110534) do
     t.decimal "rsaa_c", precision: 5, scale: 2
     t.decimal "rsaa_p", precision: 5, scale: 2
     t.decimal "fip", precision: 4, scale: 2
+    t.integer "era_g"
+    t.integer "whip_g"
+    t.integer "fip_g"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
