@@ -2,7 +2,7 @@ class CreatePitchers < ActiveRecord::Migration[5.1]
   def change
     create_table :pitchers do |t|
       t.string :name
-      t.string :picture_id
+      t.string :picture
       t.boolean :league, default: false      
       t.integer :win
       t.integer :lose
@@ -33,6 +33,10 @@ class CreatePitchers < ActiveRecord::Migration[5.1]
       t.decimal :rsaa_c, precision: 5, scale: 2
       t.decimal :rsaa_p, precision: 5, scale: 2
       t.decimal :fip, precision: 4, scale: 2
+
+      t.integer :era_g
+      t.integer :whip_g
+      t.integer :fip_g
 
       t.timestamps
     end
