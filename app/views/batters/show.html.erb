@@ -9,7 +9,9 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4"><%= image_tag 'batter_2.jpg', :size =>'180x240'%></div>
+      <div class="col-md-4">
+        <%= image_tag @batter.picture.url, :size =>'180x240'%>
+      </div>
       <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
     </div>
   </div>
@@ -35,7 +37,7 @@
       </thead>
       <tbody>
       <tr>
-        <td><%= @batter.avg %></td>
+        <td>.<%= @batter.avg_view %></td>
         <td><%= @batter.game %></td>
         <td><%= @batter.pa %></td>
         <td><%= @batter.ab %></td>
