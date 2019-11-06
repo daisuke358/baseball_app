@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20191103133515) do
     t.string "picture"
     t.boolean "league", default: false
     t.decimal "avg", precision: 6, scale: 3
-    t.decimal "avg_view", precision: 0
+    t.integer "avg_view"
     t.integer "game"
     t.integer "pa"
     t.integer "ab"

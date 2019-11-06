@@ -1,11 +1,12 @@
 class CreateBatters < ActiveRecord::Migration[5.1]
   def change
+
     create_table :batters do |t|
       t.string :name
       t.string :picture
       t.boolean :league, default: false
       t.decimal :avg, precision: 6, scale: 3
-      t.decimal :avg_view, precision: 0, scale: 0
+      t.integer :avg_view
       t.integer :game
       t.integer :pa
       t.integer :ab
@@ -40,6 +41,7 @@ class CreateBatters < ActiveRecord::Migration[5.1]
       t.integer :w_oba_g
       t.integer :rc27_g
       t.timestamps
+      
     end
   end
 end
