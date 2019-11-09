@@ -50,7 +50,15 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
+/* headerの色変更*/
+.navbar-inverse {
+  background-color: #063706;
+  border-color: #134716;
+}
+.navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #134716;
+}
 
 .test{
   height: 40px;

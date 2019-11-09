@@ -16,13 +16,11 @@ class StatsController < ApplicationController
     batter = Batter.where(league: false)
     @batters = batter.order('avg DESC')
     @rank = 1
-
   end
 
   def pacific_batter
     batter = Batter.where(league: true)
     @batters = batter.order('avg DESC')
     @rank = 1
-
   end
 end
