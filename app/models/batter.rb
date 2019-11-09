@@ -38,22 +38,22 @@ class Batter < ApplicationRecord
         end
 
 
-        if self.w_oba < 0.33
+        if self.w_oba < 0.29
             self.w_oba_g = 2
 
-        elsif self.w_oba < 0.34
+        elsif self.w_oba < 0.30
             self.w_oba_g = 3
 
-        elsif self.w_oba < 0.35
+        elsif self.w_oba < 0.31
             self.w_oba_g = 4
 
-        elsif self.w_oba < 0.36
+        elsif self.w_oba < 0.32
             self.w_oba_g = 5
 
-        elsif self.w_oba < 0.37
+        elsif self.w_oba < 0.34
             self.w_oba_g = 6
 
-        elsif self.w_oba < 0.38
+        elsif self.w_oba < 0.37
             self.w_oba_g = 7
 
         elsif self.w_oba < 0.4
