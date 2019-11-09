@@ -1,3 +1,9 @@
+User.create!(
+   email: 'abc@abc',
+   password: 'foobar'
+   )
+
+
 Batter.create!(
    [
       {
