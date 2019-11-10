@@ -1,12 +1,8 @@
 class BattersController < ApplicationController
-
   def show
     @batter = Batter.find(params[:id])
-
-
     genre = ['打率','ｗＯＢＡ','ＲＣ２７']
     aData = [@batter.avg_g,@batter.w_oba_g,@batter.rc27_g]
-
     @graph = LazyHighCharts::HighChart.new('graph') do |f|
       f.chart(polar: true,type:'line') #グラフの種類
       f.pane(size:'90%')                  #グラフサイズの比
@@ -19,5 +15,4 @@ class BattersController < ApplicationController
           layout: 'vertical')
     end
   end
-
 end
