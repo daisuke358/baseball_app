@@ -12,9 +12,9 @@
               <tr>
                 <th></th>
                 <th><%= link_to "セ・リーグ投手成績", c_pitcher_path %></th>
-                <th>防御率</th>
-                <th>WHIP</th>
-                <th>FIP</th>
+                <th><div class="tooltip3">防御率<div class="description3">9イニング当たりその投手が何点取られるか、という指標。</div></div></th>
+                <th><div class="tooltip3">WHIP<div class="description3">1イニング当たりどれだけのランナーを出しているかを示す指標。</div></div></th>
+                <th><div class="tooltip3">FIP<div class="description3">投手自身がコントロールできない運の要素を排除して計算された指標。</div></div></th>
               </tr>
             </thead>
             <tbody>
@@ -37,9 +37,9 @@
             <tr>
               <th></th>
               <th><%= link_to "パ・リーグ投手成績", p_pitcher_path %></th>
-              <th>防御率</th>
-              <th>WHIP</th>
-              <th>FIP</th>
+                <th><div class="tooltip3">防御率<div class="description3">9イニング当たりその投手が何点取られるか、という指標。</div></div></th>
+                <th><div class="tooltip3">WHIP<div class="description3">1イニング当たりどれだけのランナーを出しているかを示す指標。</div></div></th>
+                <th><div class="tooltip3">FIP<div class="description3">投手自身がコントロールできない運の要素を排除して計算された指標。</div></div></th>
             </tr>
           </thead>          
           <tbody>
@@ -66,9 +66,10 @@
             <tr>
               <th></th>
               <th><%= link_to "セ・リーグ打撃成績", c_batter_path %></th>
-              <th>打率</th>
-              <th>ｗＯＢＡ</th>
-              <th>ＲＣ２７</th>
+              <th><div class="tooltip3">打率<div class="description3">1打数当たりのヒットを打つ確率。打撃成功率。</div></div></th>
+              <th><div class="tooltip3">ｗＯＢＡ<div class="description3">長打力や出塁能力を考慮した現代の野球統計学における打者の基本的な指標。</div></div></th>
+              <th><div class="tooltip3">ＲＣ２７<div class="description3">その打者だけで27個のアウトを取られるまで（1試合終わるまで）打った場合獲得できるであろう得点を算出した指標。
+              </div></div></th>
             </tr>
           </thead>
           <tbody>
@@ -91,9 +92,10 @@
             <tr>
               <th></th>
               <th><%= link_to "パ・リーグ打撃成績", p_batter_path %></th>
-              <th>打率</th>
-              <th>ｗＯＢＡ</th>
-              <th>ＲＣ２７</th>
+              <th><div class="tooltip3">打率<div class="description3">1打数当たりのヒットを打つ確率。打撃成功率。</div></div></th>
+              <th><div class="tooltip3">ｗＯＢＡ<div class="description3">長打力や出塁能力を考慮した現代の野球統計学における打者の基本的な指標。</div></div></th>
+              <th><div class="tooltip3">ＲＣ２７<div class="description3">その打者だけで27個のアウトを取られるまで（1試合終わるまで）打った場合獲得できるであろう得点を算出した指標。
+              </div></div></th>
             </tr>
           </thead>              
           <tbody>

@@ -5,7 +5,7 @@ User.create!(
 Batter.create!(
    [
       {
-         name: '森 友哉(西)',
+         name: '森 友哉（西）',
          picture: open("#{Rails.root}/db/fixtures/batter_1.jpg"),
          league: 'true',
          game: '135',
@@ -269,7 +269,7 @@ Batter.create!(
          gdp: '12'
       },
       {
-         name: '茂木 栄五郎  （楽）',
+         name: '茂木 栄五郎（楽）',
          picture: open("#{Rails.root}/db/fixtures/1600003_s.jpg"),
          league: 'true',
          game: '141',
@@ -1449,7 +1449,7 @@ Batter.create!(
 Pitcher.create!(
    [
       {
-         name: '大野 雄大(中)',
+         name: '大野 雄大（中）',
          picture: open("#{Rails.root}/db/fixtures/1000138_s.jpg"),
          league: 'false',
          win: '9',
