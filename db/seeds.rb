@@ -2,7 +2,6 @@ User.create!(
    email: 'abc@abc',
    password: 'foobar'
    )
-
 Batter.create!(
    [
       {
@@ -1447,7 +1446,6 @@ Batter.create!(
       }
    ]
 )
-
 Pitcher.create!(
    [
       {

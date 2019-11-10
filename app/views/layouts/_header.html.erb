@@ -1,44 +1,42 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
-
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
-    <%= link_to "BASEBALLSTATS", '/', id: "logo" %>
-  </div>
+    <%= link_to "BASEBALLSTATS", root_path, id: "logo" %>
+    </div>
     <nav>
       <ul id="navbar" class="nav navbar-nav navbar-right navbar-collapse collapse">
-        <li><%= link_to "ホーム",   '/' %></li>
+        <li><%= link_to "ホーム", root_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">セ・リーグ<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "セ・投手",   '/c_pitcher' %></li>
-            <li><%= link_to "セ・打者",   '/c_batter' %></li>
+            <li><%= link_to "セ・投手", c_pitcher_path %></li>
+            <li><%= link_to "セ・打者", c_batter_path %></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">パ・リーグ<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "パ・投手",   '/p_pitcher' %></li>
-            <li><%= link_to "パ・打者",   '/p_batter' %></li>
+            <li><%= link_to "パ・投手", p_pitcher_path %></li>
+            <li><%= link_to "パ・打者", p_batter_path %></li>
           </ul>
         </li>
-        <li><%= link_to "用語解説",   '/glossary' %></li>
+        <li><%= link_to "用語解説", glossary_path %></li>
         <% if logged_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">設定<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "データ設定", '/new'%></li>
-              <li><%= link_to "ログアウト", '/users/sign_out' %></li>
+              <li><%= link_to "データ設定", new_path %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path %></li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "ログイン", '/users/sign_in' %></li>
+          <li><%= link_to "ログイン", user_session_path %></li>
         <% end %>
       </ul>
     </nav>

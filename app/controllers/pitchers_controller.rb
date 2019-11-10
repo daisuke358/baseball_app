@@ -1,12 +1,8 @@
 class PitchersController < ApplicationController
-
   def show
-    @pitcher = Pitcher.find(params[:id])
-    
-    
+    @pitcher = Pitcher.find(params[:id])    
     genre = ['防御率','WHIP','FIP']
     aData = [@pitcher.era_g,@pitcher.whip_g,@pitcher.fip_g]
-
     @graph = LazyHighCharts::HighChart.new('graph') do |f|
       f.chart(polar: true,type:'line') #グラフの種類
       f.pane(size:'90%')                  #グラフサイズの比
@@ -19,6 +15,4 @@ class PitchersController < ApplicationController
           layout: 'vertical')
     end
   end
-
-
 end

@@ -1,86 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>個人成績</title>
-</head>
-<body>
-　　
-  <h1><%= @pitcher.name %></h1>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag @pitcher.picture.url, :size =>'180x240'%></div>
-      <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
+  <head>
+    <title>個人成績</title>
+  </head>
+  <body>
+    <h1><%= @pitcher.name %></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag @pitcher.picture.url, :size =>'180x240'%></div>
+        <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
+      </div>
     </div>
-  </div>
-
-  <table class= "table table-striped">
-    <thead>
-      <tr>
-        <th>防御率</th>
-        <th>登板</th>
-        <th>完投</th>
-        <th>完封</th>
-        <th>QS</th>
-        <th>勝利</th>
-        <th>敗戦</th>
-        <th>ホールド</th>
-        <th>ホールドポイント</th>
-        <th>セーブ</th>
-        <th>勝率</th>
-        <th>投球回</th>
-        <th>被安打</th>   
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><%= @pitcher.era %></td>
-        <td><%= @pitcher.game %></td>
-        <td><%= @pitcher.cg %></td>
-        <td><%= @pitcher.sho %></td>
-        <td><%= @pitcher.qs %></td>
-        <td><%= @pitcher.win %></td>
-        <td><%= @pitcher.lose %></td>
-        <td><%= @pitcher.hld %></td>
-        <td><%= @pitcher.hp %></td>
-        <td><%= @pitcher.sv %></td>
-        <td><%= @pitcher.wpct %></td>
-        <td><%= @pitcher.ip %></td>
-        <td><%= @pitcher.hit %></td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th>被本塁打</th>
-        <th>奪三振</th>
-        <th>奪三振率</th>
-        <th>与四球</th>
-        <th>与死球</th>
-        <th>暴投</th>
-        <th>ボーク</th>
-        <th>失点</th>
-        <th>自責点</th>
-        <th>K/BB</th>
-        <th>WHIP</th>
-        <th>RSAA</th>
-        <th>FIP</th>
-      </tr>
-      <tr>
-        <td><%= @pitcher.hr %></td>
-        <td><%= @pitcher.so %></td>
-        <td><%= @pitcher.k_9 %></td>
-        <td><%= @pitcher.bb %></td>
-        <td><%= @pitcher.hbp %></td>
-        <td><%= @pitcher.wp %></td>
-        <td><%= @pitcher.bk %></td>
-        <td><%= @pitcher.r %></td>
-        <td><%= @pitcher.er %></td>
-        <td><%= @pitcher.k_bb %></td>
-        <td><%= @pitcher.whip %></td>
-        <td><%= @pitcher.rsaa_c %></td>
-        <td><%= @pitcher.fip %></td>
-      </tr>
-</table>
-</body>
+    <table class= "table table-striped">
+      <thead>
+        <tr>
+          <th>防御率</th>
+          <th>登板</th>
+          <th>完投</th>
+          <th>完封</th>
+          <th>QS</th>
+          <th>勝利</th>
+          <th>敗戦</th>
+          <th>ホールド</th>
+          <th>ホールドポイント</th>
+          <th>セーブ</th>
+          <th>勝率</th>
+          <th>投球回</th>
+          <th>被安打</th>   
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= @pitcher.era %></td>
+          <td><%= @pitcher.game %></td>
+          <td><%= @pitcher.cg %></td>
+          <td><%= @pitcher.sho %></td>
+          <td><%= @pitcher.qs %></td>
+          <td><%= @pitcher.win %></td>
+          <td><%= @pitcher.lose %></td>
+          <td><%= @pitcher.hld %></td>
+          <td><%= @pitcher.hp %></td>
+          <td><%= @pitcher.sv %></td>
+          <td><%= @pitcher.wpct %></td>
+          <td><%= @pitcher.ip %></td>
+          <td><%= @pitcher.hit %></td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th>被本塁打</th>
+          <th>奪三振</th>
+          <th>奪三振率</th>
+          <th>与四球</th>
+          <th>与死球</th>
+          <th>暴投</th>
+          <th>ボーク</th>
+          <th>失点</th>
+          <th>自責点</th>
+          <th>K/BB</th>
+          <th>WHIP</th>
+          <th>RSAA</th>
+          <th>FIP</th>
+        </tr>
+        <tr>
+          <td><%= @pitcher.hr %></td>
+          <td><%= @pitcher.so %></td>
+          <td><%= @pitcher.k_9 %></td>
+          <td><%= @pitcher.bb %></td>
+          <td><%= @pitcher.hbp %></td>
+          <td><%= @pitcher.wp %></td>
+          <td><%= @pitcher.bk %></td>
+          <td><%= @pitcher.r %></td>
+          <td><%= @pitcher.er %></td>
+          <td><%= @pitcher.k_bb %></td>
+          <td><%= @pitcher.whip %></td>
+          <td><%= @pitcher.rsaa_c %></td>
+          <td><%= @pitcher.fip %></td>
+        </tr>
+    </table>
+  </body>
 </html> 

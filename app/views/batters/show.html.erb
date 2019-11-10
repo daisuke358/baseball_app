@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>個人成績</title>
-</head>
-<body>
-　　
-  <h1><%= @batter.name %></h1>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag @batter.picture.url, :size =>'180x240'%>
+  <head>
+    <title>個人成績</title>
+  </head>
+    <body>　
+      <h1><%= @batter.name %></h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag @batter.picture.url, :size =>'180x240'%>
+          </div>
+          <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
+        </div>
       </div>
-      <div class="col-md-8"><%= high_chart("radar", @graph) %></div>
-    </div>
-  </div>
-
-  <table class= "table table-striped">
-    <thead>
-      <tr>
-        <th>打率</th>
-        <th>試合</th>
-        <th>打席</th>
-        <th>打数</th>
-        <th>安打</th>
-        <th>二塁打</th>
-        <th>三塁打</th>
-        <th>本塁打</th>
-        <th>塁打</th>
-        <th>打点</th>
-        <th>得点</th>
-        <th>三振</th>
-        <th>四球</th>
-        <th>死球</th>  
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>.<%= @batter.avg_view %></td>
-        <td><%= @batter.game %></td>
-        <td><%= @batter.pa %></td>
-        <td><%= @batter.ab %></td>
-        <td><%= @batter.hit %></td>
-        <td><%= @batter.hit_2b %></td>
-        <td><%= @batter.hit_3b %></td>
-        <td><%= @batter.hr %></td>
-        <td><%= @batter.tb %></td>
-        <td><%= @batter.rbi %></td>
-        <td><%= @batter.run %></td>
-        <td><%= @batter.so %></td>
-        <td><%= @batter.bb %></td>
-        <td><%= @batter.hbp %></td>
-      </tr>
-    </tbody>
-    <thead>
-      <tr>
-        <th>犠打</th>
-        <th>犠飛</th>
-        <th>盗塁</th>
-        <th>盗塁死</th>
-        <th>併殺打</th>
-        <th>出塁率</th>
-        <th>長打率</th>
-        <th>ＯＰＳ</th>
-        <th>ｗＯＢＡ</th>
-        <th>ｗＲＡＡ</th>
-        <th>ｗＲＣ</th>
-        <th>ＩｓｏＤ</th>
-        <th>ＩｓｏＰ</th>
-        <th>ＲＣ２７</th>
-      </tr>
-      <tr>
-        <td><%= @batter.sh %></td>
-        <td><%= @batter.sf %></td>
-        <td><%= @batter.sb %></td>
-        <td><%= @batter.cs %></td>
-        <td><%= @batter.gdp %></td>
-        <td><%= @batter.obp %></td>
-        <td><%= @batter.slg %></td>
-        <td><%= @batter.ops %></td>
-        <td><%= @batter.w_oba %></td>
-        <td><%= @batter.w_raa_p %></td>
-        <td><%= @batter.w_rc_p %></td>
-        <td><%= @batter.iso_d %></td>
-        <td><%= @batter.iso_p %></td>
-        <td><%= @batter.rc27 %></td>
-      </tr>
-</table>
-</body>
+      <table class= "table table-striped">
+        <thead>
+          <tr>
+            <th>打率</th>
+            <th>試合</th>
+            <th>打席</th>
+            <th>打数</th>
+            <th>安打</th>
+            <th>二塁打</th>
+            <th>三塁打</th>
+            <th>本塁打</th>
+            <th>塁打</th>
+            <th>打点</th>
+            <th>得点</th>
+            <th>三振</th>
+            <th>四球</th>
+            <th>死球</th>  
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>.<%= @batter.avg_view %></td>
+            <td><%= @batter.game %></td>
+            <td><%= @batter.pa %></td>
+            <td><%= @batter.ab %></td>
+            <td><%= @batter.hit %></td>
+            <td><%= @batter.hit_2b %></td>
+            <td><%= @batter.hit_3b %></td>
+            <td><%= @batter.hr %></td>
+            <td><%= @batter.tb %></td>
+            <td><%= @batter.rbi %></td>
+            <td><%= @batter.run %></td>
+            <td><%= @batter.so %></td>
+            <td><%= @batter.bb %></td>
+            <td><%= @batter.hbp %></td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th>犠打</th>
+            <th>犠飛</th>
+            <th>盗塁</th>
+            <th>盗塁死</th>
+            <th>併殺打</th>
+            <th>出塁率</th>
+            <th>長打率</th>
+            <th>ＯＰＳ</th>
+            <th>ｗＯＢＡ</th>
+            <th>ｗＲＡＡ</th>
+            <th>ｗＲＣ</th>
+            <th>ＩｓｏＤ</th>
+            <th>ＩｓｏＰ</th>
+            <th>ＲＣ２７</th>
+          </tr>
+          <tr>
+            <td><%= @batter.sh %></td>
+            <td><%= @batter.sf %></td>
+            <td><%= @batter.sb %></td>
+            <td><%= @batter.cs %></td>
+            <td><%= @batter.gdp %></td>
+            <td><%= @batter.obp %></td>
+            <td><%= @batter.slg %></td>
+            <td><%= @batter.ops %></td>
+            <td><%= @batter.w_oba %></td>
+            <td><%= @batter.w_raa_p %></td>
+            <td><%= @batter.w_rc_p %></td>
+            <td><%= @batter.iso_d %></td>
+            <td><%= @batter.iso_p %></td>
+            <td><%= @batter.rc27 %></td>
+          </tr>
+      </table>
+    </body>
 </html> 

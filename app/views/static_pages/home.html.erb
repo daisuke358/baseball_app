@@ -4,42 +4,39 @@
 <title>個人成績</title>
 </head>
 <body>
-　
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <table class= "table table-striped ">
-         <thead>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <table class= "table table-striped ">
+           <thead>
+              <tr>
+                <th></th>
+                <th><%= link_to "セ・リーグ投手成績", c_pitcher_path %></th>
+                <th>防御率</th>
+                <th>WHIP</th>
+                <th>FIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @pitchers_c.first(5).each do |pitcher| %>          
+                <tr>
+                  <td><%= @rank1 %></td>
+                  <td><%= link_to pitcher.name, pitcher%></td>
+                  <td><%= pitcher.era %></td>
+                  <td><%= pitcher.whip %></td>
+                  <td><%= pitcher.fip %></td>
+                </tr>        
+              <% @rank1 = @rank1 + 1 %>
+              <% end %>
+            </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class= "table table-striped ">
+          <thead>
             <tr>
               <th></th>
-              <th><%= link_to "セ・リーグ投手成績",   'c_pitcher' %></th>
-              <th>防御率</th>
-              <th>WHIP</th>
-              <th>FIP</th>
-            </tr>
-          </thead>
-          <tbody>
-          <% @pitchers_c.first(5).each do |pitcher| %>          
-            <tr>
-              <td><%= @rank1 %></td>
-              <td><%= link_to pitcher.name, pitcher%></td>
-              <td><%= pitcher.era %></td>
-              <td><%= pitcher.whip %></td>
-              <td><%= pitcher.fip %></td>
-            </tr>
-        
-          <% @rank1 = @rank1 + 1 %>
-          <% end %>
-          </tbody>
-      </table>
-    </div>
-    <div class="col-md-6">
-      <table class= "table table-striped ">
-        <thead>
-            <tr>
-              <th></th>
-              <th><%= link_to "パ・リーグ投手成績",   'p_pitcher' %></th>
+              <th><%= link_to "パ・リーグ投手成績", p_pitcher_path %></th>
               <th>防御率</th>
               <th>WHIP</th>
               <th>FIP</th>
@@ -54,69 +51,66 @@
               <td><%= pitcher.whip %></td>
               <td><%= pitcher.fip %></td>
             </tr>
-          <% @rank2 = @rank2 + 1 %>
-          <% end %>
+            <% @rank2 = @rank2 + 1 %>
+            <% end %>
           </tbody>
-      </table>
-    </div>
-  </div>              
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <table class= "table table-striped">
-        <thead>
-          <tr>
-            <th></th>
-            <th><%= link_to "セ・リーグ打撃成績",   'c_batter' %></th>
-            <th>打率</th>
-            <th>ｗＯＢＡ</th>
-            <th>ＲＣ２７</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @batters_c.first(5).each do |batter| %>
-          <tr>
-            <td><%= @rank3 %></td>
-            <td><%= link_to batter.name, batter%></td>
-            <td>.<%= batter.avg_view %></td>
-            <td><%= batter.w_oba %></td>
-            <td><%= batter.rc27 %></td>
-          </tr>  
-        <% @rank3 = @rank3 + 1 %>
-        <% end %>
-        </tbody>
-      </table>
-    </div>
-        
-        <div class="col-md-6">
-          <table class= "table table-striped">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th><%= link_to "パ・リーグ打撃成績",   'p_batter' %></th>
-                  <th>打率</th>
-                  <th>ｗＯＢＡ</th>
-                  <th>ＲＣ２７</th>
-                </tr>
-              </thead>              
-              <tbody>
-                <% @batters_p.first(5).each do |batter| %>
-                <tr>
-                  <td><%= @rank4 %></td>
-                  <td><%= link_to batter.name, batter%></td>
-                  <td>.<%= batter.avg_view %></td>
-                  <td><%= batter.w_oba %></td>
-                  <td><%= batter.rc27 %></td>
-                </tr>                             
-              <% @rank4 = @rank4 + 1 %>
-              <% end %>
-              </tbody>
-          </table>
-        </div>
+        </table>
+      </div>
+    </div>              
   </div>
-</div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <table class= "table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th><%= link_to "セ・リーグ打撃成績", c_batter_path %></th>
+              <th>打率</th>
+              <th>ｗＯＢＡ</th>
+              <th>ＲＣ２７</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @batters_c.first(5).each do |batter| %>
+            <tr>
+              <td><%= @rank3 %></td>
+              <td><%= link_to batter.name, batter%></td>
+              <td>.<%= batter.avg_view %></td>
+              <td><%= batter.w_oba %></td>
+              <td><%= batter.rc27 %></td>
+            </tr>  
+            <% @rank3 = @rank3 + 1 %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>         
+      <div class="col-md-6">
+        <table class= "table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th><%= link_to "パ・リーグ打撃成績", p_batter_path %></th>
+              <th>打率</th>
+              <th>ｗＯＢＡ</th>
+              <th>ＲＣ２７</th>
+            </tr>
+          </thead>              
+          <tbody>
+            <% @batters_p.first(5).each do |batter| %>
+            <tr>
+              <td><%= @rank4 %></td>
+              <td><%= link_to batter.name, batter%></td>
+              <td>.<%= batter.avg_view %></td>
+              <td><%= batter.w_oba %></td>
+              <td><%= batter.rc27 %></td>
+            </tr>                             
+            <% @rank4 = @rank4 + 1 %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 </html> 
