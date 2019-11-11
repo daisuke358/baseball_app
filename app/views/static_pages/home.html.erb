@@ -18,7 +18,7 @@
               </tr>
             </thead>
             <tbody>
-              <% @pitchers_c.first(5).each do |pitcher| %>       
+              <% @pitchers_c.each do |pitcher| %>       
                 <tr>
                   <td><%= @rank1 %></td>
                   <td><%= link_to pitcher.name, pitcher%></td>
@@ -43,7 +43,7 @@
             </tr>
           </thead>          
           <tbody>
-            <% @pitchers_p.first(5).each do |pitcher| %>
+            <% @pitchers_p.each do |pitcher| %>
             <tr>
               <td><%= @rank2 %></td>
               <td><%= link_to pitcher.name, pitcher%></td>
@@ -72,7 +72,7 @@
             </tr>
           </thead>
           <tbody>
-            <% @batters_c.first(5).each do |batter| %>
+            <% @batters_c.each do |batter| %>
             <tr>
               <td><%= @rank3 %></td>
               <td><%= link_to batter.name, batter%></td>
@@ -97,7 +97,7 @@
             </tr>
           </thead>              
           <tbody>
-            <% @batters_p.first(5).each do |batter| %>
+            <% @batters_p.each do |batter| %>
             <tr>
               <td><%= @rank4 %></td>
               <td><%= link_to batter.name, batter%></td>
